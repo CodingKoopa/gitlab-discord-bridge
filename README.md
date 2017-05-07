@@ -28,3 +28,21 @@ Tested on Ubuntu 16.10 and OS X El Capitan (with Homebrew)
 7. Test the webhook. You should see a message corresponding to the last event on the repository!
 
 If you need assistance please [create an issue](https://github.com/blha303/gitlab-discord-bridge/issues).
+
+Docker Instructions
+-------------------
+
+The Docker image follows a similar approach to a local install. Assuming you know how to use Docker, here is how to get started:
+
+1. Create a directory to hold the application's `config.json` file.
+2. Rename `config.example.json` to `config.json` and edit the file -- reference step 3 above.
+3. Create the container with the following command:
+
+```bash
+docker create --name=gitlab-bridge \
+-v <path to config file>:/usr/src/app/config.json \
+-p 25431:25431 \
+avluis/gitlab-discord-bridge
+```
+
+* Note: The application will not work without mounting the config file! If you encounter an error when running the container, verify your volume mount!
