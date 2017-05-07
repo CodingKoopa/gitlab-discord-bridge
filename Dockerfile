@@ -61,7 +61,6 @@ RUN echo "Installing essential packages..." \
 
 WORKDIR /usr/src/app
 
-# TODO -- Explain how to mount config file
 EXPOSE 25431
 
 # TODO -- Verify if entrypoint script will be needed
