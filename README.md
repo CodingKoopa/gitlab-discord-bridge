@@ -1,7 +1,7 @@
 gitlab-discord-bridge
 =====================
 
-A super simple GitLab&gt;Discord bridge that I made because the only other option is a node.js thing, and nobody should be forced to use node.js.
+This is a super simple GitLab&gt;Discord bridge. It started out as a basic [standalone Python program](https://github.com/blha303/gitlab-discord-bridge), and then had Docker support added in a [fork](https://github.com/avluis/gitlab-discord-bridge). This is a fork of the latter, with modifications made to make it build and run on the `arm64v8` architecture.
 
 Usage
 -----
