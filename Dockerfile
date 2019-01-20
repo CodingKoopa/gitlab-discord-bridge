@@ -1,4 +1,4 @@
-FROM debian:jessie-slim
+FROM arm64v8/debian:stretch
 
 LABEL name="gitlab-discord-bridge" \
 version=$CONT_IMG_VER \
