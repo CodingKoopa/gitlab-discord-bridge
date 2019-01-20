@@ -41,13 +41,6 @@ RUN echo "Installing essential packages..." \
  && pip3 install --upgrade pip setuptools > /dev/null 2>&1 \
  && echo "Installing app dependencies..." \
  && pip install --no-cache-dir -r requirements.txt > /dev/null 2>&1 \
-# clean up
- && echo "Cleaning up..." \
- && apt-get remove --purge -qy \
- $PREQ_PACKAGES \
- $BUILD_PACKAGES $(apt-mark showauto) > /dev/null 2>&1 \
- && apt-get autoremove -qy > /dev/null \
- && apt-get clean -qy > /dev/null \
 # install runtime packages
  && echo "Installing runtime packages..." \
  && apt-get -q update > /dev/null \
