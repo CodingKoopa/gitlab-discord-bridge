@@ -1,2 +1,4 @@
 # Auto detect text files and force unix-style line endings
 * text eol=lf
+
+Dockerfile.* gitlab-language=docker
